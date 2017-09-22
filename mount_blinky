@@ -1,0 +1,5 @@
+#! /bin/sh
+
+(sshfs tj@192.168.1.13:/home/tj /blinky/home && sleep 3s)
+
+sshfs tj@192.168.1.13:/etc /blinky/etc -o allow_root

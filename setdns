@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ "x$1" = "xgoogle" ]; then
+    sudo chattr -i /etc/resolv.conf
+    echo "nameserver 8.8.8.8" > /etc/resolv.conf
+    sudo chattr +i /etc/resolv.conf
+    echo "DNS set to Google's nameserver."
+
+elif [ "x$1" = "xtor" ]; then
+    sudo chattr -i /etc/resolv.conf
+    echo "nameserver 127.0.0.1" > /etc/resolv.conf
+    sudo chattr +i /etc/resolv.conf
+    echo "DNS redirected locally, for tor."
+
+else echo "No change was made."

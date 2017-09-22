@@ -1,0 +1,18 @@
+Metadata-Version: 1.0
+Name: httpripper
+Version: 1.1.1
+Summary: A generic ripper for the web implemented as a http proxy
+Home-page: http://29a.ch/httpripper/
+Author: Jonas Wagner
+Author-email: veers@gmx.ch
+License: GNU GPL v3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: X11 Applications :: GTK
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft
+Classifier: Programming Language :: Python

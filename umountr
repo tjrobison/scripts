@@ -1,0 +1,17 @@
+#!/bin/sh
+
+sudo systemctl stop ldm.service &
+( sleep 1 && sudo killall -q ranger ) &
+( sleep 3 && sudo rm -rf /media/System* ) &
+
+
+( sleep 0.5 && sudo killall -q ranger ) &
+( sleep 1 && sudo pumount /dev/sr0 ) &
+( sleep 1.5 && eject /dev/sr0 ) &
+( sleep 2 && sudo rm -rf /media/Disk ) &
+
+
+( sleep 0.5 && sudo killall -q ranger ) &
+( sleep 1 && sudo pumount /dev/sdb1 ) &
+( sleep 1.5 && sudo eject /dev/sdb1 ) &
+( sleep 2 && sudo rm -rf /media/Usb ) &

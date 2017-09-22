@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ "x$1" == "x-start" ]; then
+    systemctl stop pdnsd
+    systemctl stop polipo
+    systemctl start pdnsd-tor
+    systemctl start polipo-tor
+    systemctl start tor
+
+elif [ "x$1" == "x-stop" ]; then
+    systemctl stop tor
+    systemctl stop pdnsd-tor
+    systemctl stop polipo-tor
+    systemctl start pdnsd
+    systemctl start polipo
+
+elif [ "x$1" == "x-restart" ]; then
+    #rc.d restart privoxy
+    systemctl restart pdnsd
+    systemctl restart polipo
+    systemctl restart tor
+    # echo "nameserver 127.0.0.1" > /etc/resolv.conf
+fi
